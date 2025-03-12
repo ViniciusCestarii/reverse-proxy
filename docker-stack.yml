@@ -21,8 +21,8 @@ services:
       - "traefik.http.middlewares.redirect-to-non-www.redirectregex.replacement=https://$${1}"
       - "traefik.http.middlewares.redirect-to-non-www.redirectregex.permanent=true"
       # Custom Server header middleware
-      - "traefik.http.middlewares.custom-server-header.headers.customResponseHeaders.Server=ViniciusCestari"
-      - "traefik.http.routers.default.middlewares=custom-server-header"
+      - "traefik.http.middlewares.custom-server-header.headers.customresponseheaders.Server=ViniciusCestari"
+      - "traefik.http.routers.default.middlewares=custom-server-header" # Apply to all routes
     ports:
       - mode: host
         protocol: tcp
